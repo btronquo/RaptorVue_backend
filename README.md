@@ -5,10 +5,14 @@
 
 # Packages
 
+- DotEnv
 - Express
 - Body-Parser
 - Cors
 - Morgan
+- Mysql2
+- Nodemon (development)
+- Sequelize (& CLI)
 
 # Usefull informations
 
@@ -21,6 +25,7 @@ soon
     - Home
     - Compliance
     - Space-Manager
+    - Features
     - Contact
 
 - Middlewares
