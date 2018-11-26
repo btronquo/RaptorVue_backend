@@ -4,12 +4,12 @@
  * @description Back-end of RaptorVue
  */
 
-const express = require('express')
 const bodyParser = require('body-parser')
+const config = require('./config/config')
 const cors = require('cors')
+const express = require('express')
 const morgan = require('morgan')
 const { sequelize } = require('./models')
-const config = require('./config/config')
 
 const app = express()
 app.use(morgan('combined'))

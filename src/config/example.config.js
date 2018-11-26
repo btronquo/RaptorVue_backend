@@ -1,27 +1,14 @@
-require('dotenv').config();
-const fs = require('fs');
+require('dotenv').config()
 
 module.exports = {
   port: process.env.PORT || 8081,
-    development: {
-      username: process.env.MYSQL_USER,
-      password: process.env.MYSQL_KEY,
-      database: process.env.MYSQL_DBNAME,
-      host: process.env.MYSQL_HOST,
-      dialect: 'mysql'
-    },
-    test: {
-      username: 'database_test',
-      password: null,
-      database: 'database_test',
-      host: '127.0.0.1',
-      dialect: 'mysql'
-    },
-    production: {
-      username: 'database_test',
-      password: null,
-      database: 'database_test',
-      host: '127.0.0.1',
-      dialect: 'mysql'
+  db: {
+    database: process.env.DB_NAME || 'raptor',
+    user: process.env.DB_USER || 'raptor',
+    password: process.env.DB_PASS || 'raptor',
+    options: {
+      dialect: process.env.DB_DIALECT || 'mysql',
+      host: process.env.DB_HOST || 'localhost'
     }
-};
+  }
+}
