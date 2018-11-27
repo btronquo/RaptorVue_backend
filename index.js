@@ -10,6 +10,7 @@ const cors = require('cors')
 const express = require('express')
 const morgan = require('morgan')
 const { sequelize } = require('./models')
+require('dotenv').config()
 
 const app = express()
 app.use(morgan('combined'))
