@@ -5,7 +5,6 @@
  */
 
 const bodyParser = require('body-parser')
-const config = require('./config/config')
 const cors = require('cors')
 const express = require('express')
 const morgan = require('morgan')
@@ -21,6 +20,6 @@ require('./routes/index')(app)
 
 sequelize.sync()
   .then(() => {
-    app.listen(config.port)
-    console.log(`Server stated on port ${config.port}`)
+    app.listen(process.env.PORT)
+    console.log(`Server stated on port ${process.env.PORT}`)
   })
