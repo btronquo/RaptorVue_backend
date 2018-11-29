@@ -1,5 +1,2 @@
 node_modules/
-src/config/config.js
-src/config/config.json
-src/.env
-src/models/index.js2
+.env
