@@ -5,10 +5,10 @@
 
 # Packages
 
-- DotEnv
-- Express
 - Body-Parser
 - Cors
+- DotEnv
+- Express
 - Morgan
 - Mysql2
 - Nodemon (development)
@@ -16,27 +16,22 @@
 
 # Usefull informations
 
-soon
+> At every start of docker, migrate db and seed are executed
 
+> Start project using *docker-compose up*
 
-# Tasklist
+> Modify docker-post-run.sh as you need (example *import seed / migrates some db ..*)
 
-- Routes
-    - Home
-    - Compliance
-    - Space-Manager
-    - Features
-    - Contact
+# API Documentation
 
-- Middlewares
-    - userAccess
-    - adminAccess
-    - visitorAccess
+## Features
+> Type => api => @params =>description
+````
+GET  => api/features/ => get all features
+GET  => api/features/:id => get feature by id
+````
 
 
 # Info
 
-> This app is fully developped by me, Boris Tronquoy. I'm starting to learn VueJs and my wish is to do a beautifull app that makes sence and help people!
-
-
-
+> This app is fully developped by me, Boris Tronquoy. I'm starting to learn VueJs and my wish is to do a beautifull app that makes sence and help people to make compliance test in IT!
