@@ -18,15 +18,6 @@ app.use(cors())
 
 require('./routes/index')(app)
 
-/**
- * register
- */
-app.post('/register', (req, res) => {
-  res.send({
-    message: `user ${req.body.email} is now member!`
-  })
-})
-
 sequelize.sync()
   .then(() => {
     app.listen(process.env.PORT)

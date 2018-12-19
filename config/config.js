@@ -18,5 +18,8 @@ module.exports = {
   'production': {
     'use_env_variable': 'MYSQL_URL',
     'dialect': 'mysql'
+  },
+  authentication: {
+    jwtSecret: process.env.JWT_SECRET || 'secret'
   }
 }

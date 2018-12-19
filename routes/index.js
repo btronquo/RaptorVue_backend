@@ -1,6 +1,6 @@
 
-// const AuthenticationController = require('../controllers/AuthenticationController')
-// const AuthenticationControllerPolicy = require('../policies/AuthenticationControllerPolicy')
+const AuthenticationController = require('../controllers/AuthenticationController')
+const AuthenticationControllerPolicy = require('../policies/AuthenticationControllerPolicy')
 const FeaturesController = require('../controllers/FeaturesController')
 const ProductsController = require('../controllers/ProductsController')
 // const isAuthenticated = require('./policies/isAuthenticated')
@@ -12,6 +12,15 @@ module.exports = (app) => {
   app.get('/', function(req, res) {
     res.send('index of server');
   });
+
+  /**
+   * login and register
+   */
+  app.post('/register',
+    AuthenticationControllerPolicy.register,
+    AuthenticationController.register)
+  app.post('/login',
+    AuthenticationController.login)
 
   /**
    * features
