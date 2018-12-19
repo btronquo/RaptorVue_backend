@@ -7,6 +7,13 @@ const ProductsController = require('../controllers/ProductsController')
 
 module.exports = (app) => {
   /**
+   * home
+   */
+  app.get('/', function(req, res) {
+    res.send('index of server');
+  });
+
+  /**
    * features
    */
   app.get('/features',
