@@ -2,6 +2,7 @@
 const AuthenticationController = require('../controllers/AuthenticationController')
 const AuthenticationControllerPolicy = require('../policies/AuthenticationControllerPolicy')
 const FeaturesController = require('../controllers/FeaturesController')
+const ItemsController = require('../controllers/ItemsController')
 const ProductsController = require('../controllers/ProductsController')
 // const isAuthenticated = require('./policies/isAuthenticated')
 
@@ -35,6 +36,18 @@ module.exports = (app) => {
     FeaturesController.post)
 
   /**
+   * items 
+   */
+  app.get('/items',
+    ItemsController.index)
+  app.get('/items/:itemId',
+    ItemsController.show)
+  app.put('/items/:itemId',
+    ItemsController.put)
+  app.post('/items',
+    ItemsController.post)
+
+  /**
    * products
    */
   app.get('/products',
@@ -45,4 +58,6 @@ module.exports = (app) => {
     ProductsController.put)
   app.post('/products',
     ProductsController.post)
+
+
 }
